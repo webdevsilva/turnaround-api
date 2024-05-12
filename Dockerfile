@@ -7,5 +7,6 @@ COPY . .
 RUN pip install --no-cache-dir -r requirements.txt
 RUN python -m playwright install firefox
 RUN python -m playwright install-deps
+RUN ldd --version
 EXPOSE 3000
 CMD ["python", "main.py"]
